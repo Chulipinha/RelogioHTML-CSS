@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="clock" name="clock">
+        <div id="time">
+        <div> <span id="hours">00</span> <span>Horas</span></div>
+        <div> <span id="minutes">00</span> <span>Minutos</span></div>
+        <div> <span id="seconds">00</span> <span>Segundos</span></div>
+        </div>
+    </div>
+
+    <script>
+        function clock(){
+            var h = new Date().getHours();
+            var m = new Date().getMinutes();
+            var s = new Date().getSeconds();
+    
+            var hours = document.getElementById("hours").innerHTML = h;
+            var minutes = document.getElementById("minutes").innerHTML = m;
+            var seconds = document.getElementById("seconds").innerHTML = s;
+        }
+    
+        var interval = setInterval (clock, 1000);    
+    </script>
+    
+</body>
+</html>
